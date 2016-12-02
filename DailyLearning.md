@@ -5,3 +5,7 @@
     - `git   push --set-upstream origin master`
 #2016-11-27 18:55:56
 2. iOS 10 使用 UNNotification 本地通知
+#2016-12-02 23:56:34
+3.  NSArray
+    - `removeObject:` 会枚举数组，向每一个对象发送`isEqual:`消息。`isEqual:`的作用是判断当前对象和传入对象所饮食的数据是否相等（返回`YES`或`NO`）。不同的类可以根据自身情况覆盖`isEqual:`并实现相应的逻辑。
+    - `removeObjectIdenticalTo:`方法不会比较对象所包含的数据，只会比较指向对象的指针。因此，该方法只会移除数组所保存的那些和传入对象指针完全相同的指针。
