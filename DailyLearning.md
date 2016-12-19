@@ -1,7 +1,7 @@
 #2016-11-27 00:39:44
 1. 最近提交到 GitHub 上的代码老是需要输入用户名和密码，找了一下原因，原来是在 `git push` 的时候用的 `https` 的方式，更换成 `ssh` 的方式就好了。命令如下：
     - `git remote rm origin`
-    - `git remote add origin git@github.com:username/xxx.git` username 为你的github 用户名 xxx 为你的仓库名称
+    - `git remote add origin git@github.com:username/xxx.git` username 为你的 github 用户名 xxx 为你的仓库名称
     - `git   push --set-upstream origin master`
 #2016-11-27 18:55:56
 2. iOS 10 使用 UNNotification 本地通知
@@ -12,3 +12,23 @@
 #2016-12-05 11:37:57
 4.  Simulated Metrics
 - 可以用来预览用户界面的各种外观效果
+2016-12-19 14:02:30
+5. 什么是 Socket
+- 它是使用标准 Unix 文件描述符（file descriptor）和其它程序通讯的方式。 -- 《C语言 Socket 简单编程指南》
+6. Internet 套接字的两种类型（其实还有很多 eg: Raw Sockets)
+    - Stream Sockets (流格式)  流式套接字：可靠的双向通讯的数据流。有顺序
+    - Datagram Socket (数据包格式) 数据报套接字：无连接套接字
+    - 所有小于 1024 的端口号都被系统保留了
+7. socket() 函数
+8. bind() 函数
+9. listen() 函数
+10. accept() 函数
+11. send() 和 recv() 函数
+12. sendto() 和 recvfrom() 函数
+13. close() 和 shutdown() 函数
+14. getpeername() 函数
+15. gethostname() 函数
+16. DNS: 代表域名服务（Domain Name Service）
+    - 功能：你给它一个容易记忆的某个站点地址，它给你 IP 地址（然后你就可以使用 bind(), connect(), sendto() 或者其它函数） 
+
+
