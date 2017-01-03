@@ -32,3 +32,5 @@
     - 功能：你给它一个容易记忆的某个站点地址，它给你 IP 地址（然后你就可以使用 bind(), connect(), sendto() 或者其它函数） 
 2016-12-25 17:28:03
 ## Android: Gradle: 官方解释： Gradle是一个基于Apache Ant和Apache Maven概念的项目自动化建构工具  [链接在这](http://blog.csdn.net/lee576/article/details/50673033)
+2017-01-03 22:45:34
+17. `iOS 7` 之后 `UITabBarContriller` 的 `UITabBarItem` 的图标新加了 `UIImageRenderingMode: ` 的方法返回值为 `UIImage`
