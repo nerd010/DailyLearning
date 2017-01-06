@@ -36,3 +36,7 @@
 17. `iOS 7` 之后 `UITabBarContriller` 的 `UITabBarItem` 的图标新加了 `UIImageRenderingMode: ` 的方法返回值为 `UIImage`
 2017-01-06 21:16:55
 18. 多播代理 （MulticastDelegate）
+19. UINavigationBar 透明设置 背景图片 设置一张空`UIImage`:  `UIImage *image = [[UIImage alloc] init];
+        [self.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+        // 设置导航条的样式
+        self.navigationBar.barStyle = UIBarStyleBlackOpaque;`
