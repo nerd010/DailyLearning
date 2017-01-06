@@ -40,3 +40,4 @@
         [self.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
         // 设置导航条的样式
         self.navigationBar.barStyle = UIBarStyleBlackOpaque;`
+20. `UIBarButtonItem`: `leftBarButtonItem`的 `- (instancetype)initWithCustomView:(UIView *)customView;` ; `self.navigationItem.titleView` 和 `rightBarButtonItems` 的 `rightBarButtonItems` 基本 的自定义 `navigationBar`的需求
