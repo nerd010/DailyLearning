@@ -47,3 +47,12 @@
 22. iOS Sandbox 
 2017-01-10 08:11:03
 23. C：`switch `判断表达式应该具有整数值（包括 `char` 类型）。`case` 标签必须是整型（包括`char`）常量或者整数常量表达式（公包含整数常量表达式）。不能用变量作为`case`标签
+24. C: `12.3` 默认类型为 `double`; `12.3f` 为 `float`
+2017-01-11 21:52:20
+25. `UIScreen` 的  `bound`, `frame`, `scale`属性
+    `UIScreen` 对象包含了整个屏幕的边界矩形。当构造应用的用户界面接口时，你应该使用该对象的属性来获得推荐的矩形大小，用以构造你的程序窗口。
+```
+    CGRect bound = [UIScreen mainScreen].bounds; //返回的是带有状态栏的 rect
+    CGRect frame = [UIScreen mainScreen].applicationFrame; //返回的是不带有状态栏的 rect
+    CGFloat scale = [UIScreen mainScreen].scale; // 得到设备的自然分辨率 ，1：普通屏幕  2：视网膜屏幕  3：6p 和 7p
+```
