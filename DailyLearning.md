@@ -56,3 +56,8 @@
     CGRect frame = [UIScreen mainScreen].applicationFrame; //返回的是不带有状态栏的 rect
     CGFloat scale = [UIScreen mainScreen].scale; // 得到设备的自然分辨率 ，1：普通屏幕  2：视网膜屏幕  3：6p 和 7p
 ```
+2017-01-15 22:22:39
+26. `UITableView` 的 `UITableViewDelegate`和 `UITableViewDataSource` 从 控制器中分离，在控制器中引入`dataSource`时要用属性引入，否则是无法执行 `dataSource`的方法的。
+27. 如果要在分类`Category`中添加并属性，请使用`Objective-C Associated Objects ` 具体 [在这里](http://blog.leichunfeng.com/blog/2015/06/26/objective-c-associated-objects-implementation-principle/)
+28. `UIButton`如果用`adjustsImageWhenHighlighted` 这个方法无法实现长按后图片有阴影的现象，那就我一定 `setHighlighted`方法。忘了方法名有没有ed 了。
+29. `tableHeaderView`和`headerView`是两个不同的，前者是只有一个，后者是每个`section` 的。
