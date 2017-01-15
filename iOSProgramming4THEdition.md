@@ -79,7 +79,14 @@
     - 多线程特性
     - 读写特性
     - 内存管理特性
-- 
+- `unsafe_unretained` 是相对于弱引用而言的。该类型的指针指向的对象被销毁时，指针不会自动设置为`nil`，而是成为空指针。它时非对象属性的默认值。
+- `copy`: 通常情况下，当某个属性是指向其他对象的指针，而且该对象有可修改的子类（`NSString/NSMutableString`或 `NSArray/NSMutableArray`）时，应该将该属性的内存管理特性设置为`copy`. `copy`属性的`setter` 方法 
+```
+ - (void)setItemName:(NSString *)itemName
+{
+    _itemName = [itemName copy];
+}
+```
 
 #2016-12-02 23:54:56
 ## 第9章 编辑 UITableView
