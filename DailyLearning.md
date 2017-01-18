@@ -61,3 +61,9 @@
 27. 如果要在分类`Category`中添加并属性，请使用`Objective-C Associated Objects ` 具体 [在这里](http://blog.leichunfeng.com/blog/2015/06/26/objective-c-associated-objects-implementation-principle/)
 28. `UIButton`如果用`adjustsImageWhenHighlighted` 这个方法无法实现长按后图片有阴影的现象，那就我一定 `setHighlighted`方法。忘了方法名有没有ed 了。
 29. `tableHeaderView`和`headerView`是两个不同的，前者是只有一个，后者是每个`section` 的。
+2017-01-18 12:12:08
+30. 两个联合在一起使用才会出现 你想要的效果！！！内容居左并向右偏移10个单位
+```
+        self.nameBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        self.nameBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
+```
