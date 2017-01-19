@@ -67,3 +67,5 @@
         self.nameBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         self.nameBtn.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 0);
 ```
+2017-01-19 23:10:02
+31. 图片平铺 保真方法：`- (UIImage *)stretchableImageWithLeftCapWidth:(NSInteger)leftCapWidth topCapHeight:(NSInteger)topCapHeight ` 
