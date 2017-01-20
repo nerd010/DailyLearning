@@ -69,3 +69,5 @@
 ```
 2017-01-19 23:10:02
 31. 图片平铺 保真方法：`- (UIImage *)stretchableImageWithLeftCapWidth:(NSInteger)leftCapWidth topCapHeight:(NSInteger)topCapHeight ` 
+2017-01-20 18:40:46
+32. 懒加载：懒加载其实就是重写对象的 `getter` 方法，需要注意在 `getter` 方法里切勿使用 `self.xxx`，因为`self.xxx`会调用 `getter` 方法，造成死循环
