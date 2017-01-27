@@ -71,3 +71,7 @@
 31. 图片平铺 保真方法：`- (UIImage *)stretchableImageWithLeftCapWidth:(NSInteger)leftCapWidth topCapHeight:(NSInteger)topCapHeight ` 
 2017-01-20 18:40:46
 32. 懒加载：懒加载其实就是重写对象的 `getter` 方法，需要注意在 `getter` 方法里切勿使用 `self.xxx`，因为`self.xxx`会调用 `getter` 方法，造成死循环
+2017-01-27 12:14:34
+33. SVN: `trunk`:主干，当前开发项目的主目录; `branches`: 分支目录，添加非主线功能时使用，开发测试之后，可以合并到主干项目中。`tags`: 标记目录，通常作为我现在在版本的备份。
+34. `Git`是一款开源的分布式版本控制工具
+35. `Git`的版本号是一个 40 位的哈希值，而`SVN`中的版本号是一个递增的整数
