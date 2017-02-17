@@ -82,3 +82,8 @@
 39. 在给自定义`View` 的`xib` 文件命名时不要用控制器去掉`Controller`后的名字，因为控制器在加载时会先匹配去掉`Controller`后的名字的`xib`文件，如果没有再去找有没有全名的`xib`文件，如果没有才会创建一个空的控制器，在找`xib`文件时它，如果控制器发现有去掉`Controller`后名字的`xib`文件，但不是给自己用的时，就会崩掉。遇到这种情况可能会感觉很无厘头，所以自己在给`xib`文件命名时注意。语言不是很通顺。
 2017-02-01 13:51:09
 40. 服务器的多值参数用`&`拼接
+2017-02-16 19:24:11
+41. 加密：现在大多数公司的服务器都是存储的密文，不再存储明文，客户端加密后形成密文，然后上传到服务器。用户再次登陆时，服务器比对的是密文。现在如果忘记密码，只能修改，不能找回，也是这个原因。
+42. 代码混淆：因为现在有反编译，所以发布之前最好进行混淆代码。
+2017-02-17 09:36:46
+43. __kindof is a new feature of the Objective-C language announced by Apple, together with other new features such as Nullability Annotations and Generics. Xcode 7 is needed to use __kindof, so be sure to use that when going over through this post.
