@@ -87,3 +87,4 @@
 42. 代码混淆：因为现在有反编译，所以发布之前最好进行混淆代码。
 2017-02-17 09:36:46
 43. __kindof is a new feature of the Objective-C language announced by Apple, together with other new features such as Nullability Annotations and Generics. Xcode 7 is needed to use __kindof, so be sure to use that when going over through this post.
+44. You need to attach your bar button item to your custom view controller, not to the navigation controller. `self.navigationItem.rightBarButtonItem = rightBtnItem;` 而不是 `self.navigationController.navigationItem.rightBarButtonItem = rightBtnItem;`
