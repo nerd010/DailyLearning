@@ -89,5 +89,6 @@
 43. __kindof is a new feature of the Objective-C language announced by Apple, together with other new features such as Nullability Annotations and Generics. Xcode 7 is needed to use __kindof, so be sure to use that when going over through this post.
 44. You need to attach your bar button item to your custom view controller, not to the navigation controller. `self.navigationItem.rightBarButtonItem = rightBtnItem;` 而不是 `self.navigationController.navigationItem.rightBarButtonItem = rightBtnItem;`
 2017-03-05 16:10
-45. Docker 中的仓库，镜像，容器的理解
+45. Docker 中的仓库，镜像，容器的理解，来一张图吧！![](https://sfault-image.b0.upaiyun.com/404/256/404256463-545a1d114c535_articlex)
+46. `FROM: Ubuntu` 容器中没有 `sudo` 和 `curl` 使用命令 `apt-get -qq update` 和 `apt-get -qq -y curl`
 
