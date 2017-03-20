@@ -118,3 +118,13 @@ import (
 2017-03-16 11:31:23
 48. 什么是 `chaincode` 
     - `chaincode`（链码）是部署在 Hyperledger fabric 网络节点上，可被调用与分布式账本进行交互的一段程序代码，也即狭义范畴上的“智能合约”。链码在 VP 节点上的隔离沙盒（目前为 Docker 容器）中执行，并通过 `gRPC` 协议来被相应的 VP 节点调用和查询。
+2017-03-17 15:06:02
+49. `Ubuntu` 配置 `Go` 语言的环境变量，在`/etc/profile`文件中 , `vim /etc/profile` 添加 
+```
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/gocode
+```
+这两行代码。 **注**： `$GOPATH` 不是你的工作目录
+2017-03-20 10:58:08
+50. [SSH原理与运用（一）：远程登录](http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html)
+
