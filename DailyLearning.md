@@ -153,3 +153,30 @@ export GOPATH=$HOME/gocode
 ```
 UIViewController *topmostVC = [self topViewController];
 ```
+2017-03-26 13:02:08
+- Ubuntu 16.10 修改字符编码设置
+    如果出现汉字乱码的情况可以使用下面的方法去设置
+第一步：`sudo vim /var/lib/locales/supported.d/en ` 添加如下内容：
+```
+zh_CN.GBK GBK
+zh_CN.GB2312 GB2312
+zh_CN. UTF-8 UTF-8
+```
+第二步：` sudo dpkg-reconfigure --force locales ` 强制更新设置
+第三步： 在 `/etc/environment` 中添加或修改部分：
+```
+LANGUAGE="zh_CN:en_US:en"
+LANG="zh_CN.GBK"
+LC_NUMERIC="zh_CN.GBK"
+LC_TIME="zh_CN.GBK"
+LC_MONETARY="zh_CN.GBK"
+LC_PAPER="zh_CN.GBK"
+LC_IDENTIFICATION="zh_CN.GBK"
+LC_NAME="zh_CN.GBK"
+LC_ADDRESS="zh_CN.GBK"
+LC_TELEPHONE="zh_CN.GBK"
+LC_MEASUREMENT="zh_CN.GBK"
+LC_CTYLE="zh_CN.GBK"
+LC_ALL="zh_CN.GBK"
+```
+**最后重启系统**
