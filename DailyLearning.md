@@ -154,7 +154,7 @@ export GOPATH=$HOME/gocode
 UIViewController *topmostVC = [self topViewController];
 ```
 2017-03-26 13:02:08
-- Ubuntu 16.10 修改字符编码设置
+52. Ubuntu 16.10 修改字符编码设置
     如果出现汉字乱码的情况可以使用下面的方法去设置
 第一步：`sudo vim /var/lib/locales/supported.d/en ` 添加如下内容：
 ```
