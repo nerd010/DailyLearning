@@ -153,7 +153,7 @@ export GOPATH=$HOME/gocode
 ```
 UIViewController *topmostVC = [self topViewController];
 ```
-2017-03-26 13:02:08
+ 2017-03-26 13:02:08
 52. Ubuntu 16.10 修改字符编码设置
     如果出现汉字乱码的情况可以使用下面的方法去设置
 第一步：`sudo vim /var/lib/locales/supported.d/en ` 添加如下内容：
@@ -180,3 +180,10 @@ LC_CTYLE="zh_CN.GBK"
 LC_ALL="zh_CN.GBK"
 ```
 **最后重启系统**
+53. `52. Ubuntu 16.10 修改字符编码设置` 不用了，找到一种新的方法来修改时区
+            date tzselect
+按照你要选择的时区做出选择操作，这里不详细说了。
+- 查看时区的命令
+```
+    date -R
+```
