@@ -189,3 +189,24 @@ LC_ALL="zh_CN.GBK"
 ```
 2017-05-10 15:27:33
 54. Docker CE 与 Docker EE 不同： 一个是个人版本， 一个是企业版本。 具体请参考[链接](http://blog.csdn.net/liumiaocn/article/details/60468257)
+55. Ubuntu 安装 golang
+Try:
+```
+$ sudo apt-get install golang-go
+```
+... but if that's too old for you, try:
+```
+$ sudo apt-get install golang-1.8-go
+```
+Or use Go's official (non-Deb) [downloads:](https://golang.org/dl/)
+If you're using Ubuntu 16.04 LTS and are unable to install golang-1.8-go, then you can also use the longsleep/golang-backports PPA:
+```
+sudo add-apt-repository ppa:longsleep/golang-backports
+sudo apt-get update
+sudo apt-get install golang-go
+```
+**查看 Ubuntu 版本**
+```
+lsb_release -a
+```
+
