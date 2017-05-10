@@ -188,4 +188,4 @@ LC_ALL="zh_CN.GBK"
     date -R
 ```
 2017-05-10 15:27:33
-54. Docker CE 与 Docker EE 不同： 一个是个人版本， 一个是企业版本
+54. Docker CE 与 Docker EE 不同： 一个是个人版本， 一个是企业版本。 具体请参考[链接](http://blog.csdn.net/liumiaocn/article/details/60468257)
