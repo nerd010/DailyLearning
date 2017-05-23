@@ -215,3 +215,12 @@ lsb_release -a
 $ sudo docker run -p [([<host_interface>:[host_port]])|(<host_port>):]<container_port>[/udp] <image> <cmd>
 ```
 ![Docker 简介](https://opskumu.gitbooks.io/docker/content/chapter1.html)
+2017-05-23 19:26:58
+57. docker-compose 文件 的扩展名 `.yml` `.yaml` 有什么不同
+```
+File extensions do not have any bearing or impact on the content of the file. You can hold YAML content in files with any extension: .yml, .yaml or indeed anything else.
+
+The (rather sparse) YAML FAQ recommends that you use .yaml in preference to .yml, but for historic reasons many Windows programmers are still scared of using extensions with more than three characters and so opt to use .yml instead.
+
+So, what really matters is what is inside the file, rather than what its extension is.
+```
