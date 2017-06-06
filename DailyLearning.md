@@ -215,7 +215,9 @@ lsb_release -a
 $ sudo docker run -p [([<host_interface>:[host_port]])|(<host_port>):]<container_port>[/udp] <image> <cmd>
 ```
 ![Docker 简介](https://opskumu.gitbooks.io/docker/content/chapter1.html)
+
 2017-05-23 19:26:58   
+
 57. docker-compose 文件 的扩展名 `.yml` `.yaml` 有什么不同
 ```
 File extensions do not have any bearing or impact on the content of the file. You can hold YAML content in files with any extension: .yml, .yaml or indeed anything else.
@@ -224,3 +226,6 @@ The (rather sparse) YAML FAQ recommends that you use .yaml in preference to .yml
 
 So, what really matters is what is inside the file, rather than what its extension is.
 ```
+
+58. fabric-1.0-alpha2 `make docker` 时出现 `unrecognized import path "golang.org/x/tools/go/gcexportdata"` 
+查看你的 golang 版本，请按要求升级到  1.7 以上。不说怎么升级了。
