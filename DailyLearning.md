@@ -227,5 +227,6 @@ The (rather sparse) YAML FAQ recommends that you use .yaml in preference to .yml
 So, what really matters is what is inside the file, rather than what its extension is.
 ```
 
-58. fabric-1.0-alpha2 `make docker` 时出现 `unrecognized import path "golang.org/x/tools/go/gcexportdata"` 
+58. fabric-1.0-alpha2 `make docker` 时出现 `unrecognized import path "golang.org/x/tools/go/gcexportdata"` ,`cp: cannot stat ‘build/docker/gotools/bin/protoc-gen-go’: No such file or directory`
 查看你的 golang 版本，请按要求升级到  1.7 以上。不说怎么升级了。
+
