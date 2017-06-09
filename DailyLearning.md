@@ -230,3 +230,4 @@ So, what really matters is what is inside the file, rather than what its extensi
 58. fabric-1.0-alpha2 `make docker` 时出现 `unrecognized import path "golang.org/x/tools/go/gcexportdata"` ,`cp: cannot stat ‘build/docker/gotools/bin/protoc-gen-go’: No such file or directory`
 查看你的 golang 版本，请按要求升级到  1.7 以上。不说怎么升级了。
 
+59. 用行动证明了自己的sha 我的天= =   Liunx 系统 树状图 直接用 `tree`命令生成就好了
