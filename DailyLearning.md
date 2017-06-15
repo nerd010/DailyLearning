@@ -231,3 +231,6 @@ So, what really matters is what is inside the file, rather than what its extensi
 查看你的 golang 版本，请按要求升级到  1.7 以上。不说怎么升级了。
 
 59. 用行动证明了自己的sha 我的天= =   Liunx 系统 树状图 直接用 `tree`命令生成就好了
+### 2017-06-15 10:39:22
+60. maven package 和 install 有什么区别
+package 是把 jar 包 打到项目的 target 下，而 install 是把 target 下的 jar 包安装到本地仓库，供其它项目使用。
