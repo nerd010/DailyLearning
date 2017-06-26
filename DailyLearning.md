@@ -243,3 +243,19 @@ delete * from T_Nav_Team where len(title)<3
 select * from table where length(column) = 某个值 
 ```
 length()是计算字符串长度的函数，不同的数据库，可能不一样。
+
+### 2017-06-26 11:24:01
+62. 升级 Git    
+要获得最新版本的Git，你需要在Ubuntu中添加Git的维护者团队PPA（归档包）到您的软件源列表。使用以下命令添加PPA：
+```
+$ sudo add-apt-repository ppa:git-core/ppa
+```
+然后更新源列表并升级`git`：
+```
+$ sudo apt-get update
+$ sudo apt-get install -y git
+```
+现在，你应该已经是最新版本，使用以下命令查看`git`版本：
+```
+$ git --version
+```
