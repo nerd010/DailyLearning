@@ -261,23 +261,31 @@ $ git --version
 ```
 ### 2017-07-03 10:16:36
 63. 今天我们也来聊聊 Mac 与服务器 ssh 无密码登录的问题   
-```
-1. 编辑 vim ~/.bash_profile，如果你以前没新建过，那么新建它；有的话就打开修改添加。   
-如果是 zsh 的话，vim ~/.zshrc, 道理相同，在最后面追加就可以了。
-2. 添加别名： alias 9.2="ssh root@192.168.9.2"    !!!等号前后不能出现空格!!!
-3. 使配置命令生效： bash下执行"source ~/.bash_profile"，此条命令是使 bash 重新载入配置令刚才命令生效。 如果是 zsh，就 source ~/.zshrc
 
-ssh 无密码登录
-1. 生成密钥：ssh-keygen -t rsa -C "email@example.com" #可以看到两个密钥文件：id_rsa（私钥） id_rsa.pub（公钥）#公钥是加密，私钥是解密（不要外传私钥）
-2. 将公钥复制到服务器
-#先登录到远程服务器
-    cd ~/.ssh
-    cat -n /root/.ssh/id_rsa.pub >> authorized_keys
-    有的话添加（有的话不要删掉，因为别人可能做过免密登录），没有则新建一个就行
-以上比较要注意的是： 公钥要放在登录服务器所用的账号的家目录下，比如你用 abc 登录远程服务器，就要把公钥 放到 /home/abc/.ssh/下， authorized_keys 文件也是在这个目录下。
-3. 修改服务端 ~/.ssh 文件夹权限为 700，修改 id_rsa.pub 的权限和 authorized_keys 的仅限
+-  编辑 `vim ~/.bash_profile`，如果你以前没新建过，那么新建它；有的话就打开修改添加。   如果是 `zsh` 的话，`vim ~/.zshrc`, 道理相同，在最后面追加就可以了。
+- 添加别名： `alias 9.2="ssh root@192.168.9.2"`    !!!等号前后不能出现空格!!!
+-  使配置命令生效： `bash` 下执行 `source ~/.bash_profile`，此条命令是使 `bash` 重新载入配置令刚才命令生效。 如果是 `zsh`，就 `source ~/.zshrc`
+
+#### ssh 无密码登录
+- 生成密钥：
+```
+#可以看到两个密钥文件：id_rsa（私钥） id_rsa.pub（公钥）
+#公钥是加密，私钥是解密（不要外传私钥）
+$ ssh-keygen -t rsa -C "email@example.com" 
+```
+- 将公钥复制到服务器
+```
+# 先登录到远程服务器
+# 有的话添加（有的话不要删掉，因为别人可能做过免密登录），没有则新建一个就行
+# 以上比较要注意的是： 公钥要放在登录服务器所用的账号的家目录下，比如你用 abc 登录# 远程服务器，就要把公钥 放到 /home/abc/.ssh/下， authorized_keys 文件也是在这个目录# 下。
+cd ~/.ssh
+cat -n /root/.ssh/id_rsa.pub >> authorized_keys
+```
+
+- 修改服务端 `~/.ssh` 文件夹权限为 `700`，修改 `id_rsa.pub` 的权限和 `authorized_keys`的仅限
+```
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
-4. 在 Mac 端 使用 ssh-copy-id User@ip 输入一次密码就可以了，以后就可以正常使用别名登录了
 ```
+- 在 Mac 端 使用 `ssh-copy-id User@ip` 然后输入一次密码就可以了，以后就可以正常使用别名登录了
 
