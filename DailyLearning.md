@@ -288,4 +288,25 @@ chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
 ```
 - 在 Mac 端 使用 `ssh-copy-id User@ip` 然后输入一次密码就可以了，以后就可以正常使用别名登录了
+- - - - -
+# 2017-07-06 10:43:51
+安装 Java 环境
+- Ubuntu 16.04
+- Java 8
 
+- 添加 PPA
+```
+$ sudo add-apt-repository ppa:webupd8team/java
+```
+- 升级并安装 installer script, 如果是 Java 9 就用 `oracle-java9-installer `
+```
+$ sudo apt update; sudo apt install oracle-java8-installer
+```
+- 查看 Java 版本
+```
+$ javac -version
+```
+- 设置 Java 环境变量
+```
+$ sudo apt install oracle-java8-set-default
+```
