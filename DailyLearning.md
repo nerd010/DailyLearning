@@ -316,3 +316,10 @@ $ sudo apt install oracle-java8-set-default
 62. git `No user exists for uid 501`
 遇到一个 git 的坑，提示`No user exists for uid 501`, 重启一下终端就好了，系统有更新的话需要重启终端更新一下配置。
 >>>>>>> Stashed changes
+
+- - - - -
+2017-07-10 16:54:53
+64. 这里应该是要写 docker deamon 那个错误的，当时没记，现在已经忘记了......
+- - - - -
+2017-07-12 13:47:43
+65. shell 脚本解决问题
