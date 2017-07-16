@@ -323,3 +323,6 @@ $ sudo apt install oracle-java8-set-default
 - - - - -
 2017-07-12 13:47:43
 65. shell 脚本解决问题; [Bash 命令](https://tiswww.case.edu/php/chet/bash/bashref.html)
+- - - - -
+2017-07-16 12:57:40
+66. ESLint 是一个插件化的 javascript 代码检测工具，它可以用于检查常见的 JavaScript 代码错误，也可以进行代码风格检查，这样我们就可以根据自己的喜好指定一套 ESLint 配置，然后应用到所编写的项目上，从而实现辅助编码规范的执行，有效控制项目代码的质量。
