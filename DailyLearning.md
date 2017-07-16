@@ -326,3 +326,9 @@ $ sudo apt install oracle-java8-set-default
 - - - - -
 2017-07-16 12:57:40
 66. ESLint 是一个插件化的 javascript 代码检测工具，它可以用于检查常见的 JavaScript 代码错误，也可以进行代码风格检查，这样我们就可以根据自己的喜好指定一套 ESLint 配置，然后应用到所编写的项目上，从而实现辅助编码规范的执行，有效控制项目代码的质量。
+67. HTML表单是一个包含表单元素的区域， 表单使用<form> 标签创建。表单能够包含 <a target="_blank" title="HTML input 元素，比如文本字段、复选框、单选框、提交按钮等等。表单还可以包含<a target="_blank" title="HTML menus、<a target="_blank" title="HTML textarea、<a target="_blank" title="HTML fieldset、<a target="_blank" title="HTML legend 和 <a target="_blank" title="HTML label 元素。注意，<form >元素是块级元素，其前后会产生折行。
+```
+<form action="reg.ashx" method="post">
+<!--表单元素在这里-->
+</form>
+```
