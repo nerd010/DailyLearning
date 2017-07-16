@@ -322,4 +322,4 @@ $ sudo apt install oracle-java8-set-default
 64. 这里应该是要写 docker deamon 那个错误的，当时没记，现在已经忘记了......
 - - - - -
 2017-07-12 13:47:43
-65. shell 脚本解决问题
+65. shell 脚本解决问题; [Bash 命令](https://tiswww.case.edu/php/chet/bash/bashref.html)
