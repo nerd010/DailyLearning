@@ -332,3 +332,4 @@ $ sudo apt install oracle-java8-set-default
 <!--表单元素在这里-->
 </form>
 ```
+68. 这两天工作中使用到了  `Node.js` 于是乎开始看代码学习。`const joi = require('joi');` Joi 是 hapijs 自带的数据校验模块，他已经高度封装常用的校验功能，[如何优雅地使用 joi 对数据进行校验?](http://imweb.io/topic/572561798a0819f17b7d9d3e) 相信你会喜欢上它。
