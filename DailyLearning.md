@@ -437,3 +437,6 @@ url.resolve('/one/two/three', 'four')         // '/one/two/four'
 url.resolve('http://example.com/', '/one')    // 'http://example.com/one'
 url.resolve('http://example.com/one', '/two') // 'http://example.com/two'
 ```
+- - - - -
+2017-07-17 10:48:11
+71. Node.js 使用 `===` 即会判断类型，又会判断结果。
