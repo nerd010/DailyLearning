@@ -451,3 +451,4 @@ var selected = allJobs.filter(function (job) {
 var selected = allJobs.filter(job => job.isSelected());
 ```
 当你需要只有一个参数的函数，箭头函数的语法可以简化为 `Identifier => Expression`, 直接省略了 `function` 和 `return` 关键字，连括号和结尾的分号也同时省略了。
+73. 调试 `Node.js` 使用 `node-inspector`
