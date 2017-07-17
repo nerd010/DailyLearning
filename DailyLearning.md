@@ -440,3 +440,14 @@ url.resolve('http://example.com/one', '/two') // 'http://example.com/two'
 - - - - -
 2017-07-17 10:48:11
 71. Node.js 使用 `===` 即会判断类型，又会判断结果。
+72. 箭头函数 `=>`
+```
+// ES5
+var selected = allJobs.filter(function (job) {
+    return job.isSelected();
+});
+
+//ES6
+var selected = allJobs.filter(job => job.isSelected());
+```
+当你需要只有一个参数的函数，箭头函数的语法可以简化为 `Identifier => Expression`, 直接省略了 `function` 和 `return` 关键字，连括号和结尾的分号也同时省略了。
