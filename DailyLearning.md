@@ -332,7 +332,7 @@ $ sudo apt install oracle-java8-set-default
 <!--表单元素在这里-->
 </form>
 ```
-68. 这两天工作中使用到了  `Node.js` 于是乎开始看代码学习。`const joi = require('joi');` Joi 是 hapijs 自带的数据校验模块，他已经高度封装常用的校验功能，[如何优雅地使用 joi 对数据进行校验?](http://imweb.io/topic/572561798a0819f17b7d9d3e) 相信你会喜欢上它。
+68. 这两天工作中使用到了  `Node.js` 于是乎开始看代码学习。`const joi = require('joi');` joi 是 hapijs 自带的数据校验模块，他已经高度封装常用的校验功能，[如何优雅地使用 joi 对数据进行校验?](http://imweb.io/topic/572561798a0819f17b7d9d3e) 相信你会喜欢上它。
 69. [`Node.js` 有两种运行模式](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)：正常模式；严格模式（`'use strict';`）。 设立『严格模式』的目的，主要有以下几个：
     - 消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;
     - 消除代码运行的一些不安全之处，保证代码运行的安全；
@@ -452,3 +452,11 @@ var selected = allJobs.filter(job => job.isSelected());
 ```
 当你需要只有一个参数的函数，箭头函数的语法可以简化为 `Identifier => Expression`, 直接省略了 `function` 和 `return` 关键字，连括号和结尾的分号也同时省略了。
 73. 调试 `Node.js` 使用 `node-inspector`
+- - - - -
+2017-07-18 10:49:02
+74. Node.js 的路径问题
+```
+__dirname: 总是返回被执行的 js 所在文件夹的绝对路径
+__filename: 总是返回被执行的 js 的绝对路径
+process.cwd(): 总是返回运行 node 命令时所在的文件夹的绝对路径
+```
