@@ -479,7 +479,8 @@ process.cwd(): 总是返回运行 node 命令时所在的文件夹的绝对路�
 需要添加 ` --unsafe-perm` 这样来解决，如`sudo npm install --unsafe-perm --verbose -g sails`
 - - - - -
 2017-07-19 22:39:23
-77. 如果你经常要使用云主机而云主机的名称又太长，那应用 `hostname` 来修改吧，如果你想了解更多关于 `hostname` 命令的内容，你可以[点击这里](http://www.cnblogs.com/kerrycode/p/3595724.html)也许有不正确的地方，所以实践出真知。
+77. 云主机 `hostname` 修改名称    
+如果你经常要使用云主机而云主机的名称又太长，那应用 `hostname` 来修改吧，如果你想了解更多关于 `hostname` 命令的内容，你可以[点击这里](http://www.cnblogs.com/kerrycode/p/3595724.html)也许有不正确的地方，所以实践出真知。
 =======
 65. shell 脚本解决问题
 - - - - -
