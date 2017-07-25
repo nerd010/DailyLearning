@@ -540,4 +540,5 @@ fi
 ```
 要修改 `package.json` 的版本号。把代码提交到 git 服务端（如果你用的是 Git的话）
 `npm publish --tag 0.1.0.1` 这样
+[来自这里的解释](https://github.com/npm/npm/issues/9266): make sure that you've changed the version of your application in the package.json file as well not only the version on git repo
 - - - - -
