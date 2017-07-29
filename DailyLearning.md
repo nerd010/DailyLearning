@@ -543,3 +543,24 @@ fi
 [来自这里的解释](https://github.com/npm/npm/issues/9266): make sure that you've changed the version of your application in the package.json file as well not only the version on git repo
 - - - - -
 81. Ubuntu 16.04 重启 mysql ：`systemctl restart mysql`
+- - - - -
+2017-07-29 16:24:12
+82. Shell 脚本语言
+BASH_SOURCE[0] 等于 BASH_SOURCE,  取得当执行的 shell 文件所在的路径及文件名。
+test.sh
+```
+#!/bin/sh
+set -e
+echo "${BASH_SOURCE[0]}"
+echo "${BASH_SOURCE}"
+echo "$(dirname "${BASH_SOURCE[0]}" )"
+DIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd )"
+echo $DIR
+```
+source ./test.sh 输出为
+```
+./test.sh
+./test.sh
+.
+/root/github/banquanjia
+```
