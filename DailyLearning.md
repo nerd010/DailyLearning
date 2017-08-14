@@ -567,3 +567,4 @@ source ./test.sh 输出为
 - - - - -
 2017-08-14 14:43:04
 83. IDEA 修改类名 shift+f6 或者 鼠标右键 refactor->rename
+84. idea 自定义代码模板 ：`Editor -> Live Templates -> output`, 参考 原模板
