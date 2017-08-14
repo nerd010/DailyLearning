@@ -564,3 +564,6 @@ source ./test.sh 输出为
 .
 /root/github/banquanjia
 ```
+- - - - -
+2017-08-14 14:43:04
+83. IDEA 修改类名 shift+f6 或者 鼠标右键 refactor->rename
