@@ -322,6 +322,7 @@ $ sudo apt install oracle-java8-set-default
 64. 这里应该是要写 docker deamon 那个错误的，当时没记，现在已经忘记了......
 - - - - -
 2017-07-12 13:47:43
+<<<<<<< Updated upstream
 65. shell 脚本解决问题; [Bash 命令](https://tiswww.case.edu/php/chet/bash/bashref.html)
 - - - - -
 2017-07-16 12:57:40
@@ -477,5 +478,114 @@ process.cwd(): 总是返回运行 node 命令时所在的文件夹的绝对路�
 `sudo npm install xxx` 出现 这样的错误信息`gyp WARN EACCES ......`
 需要添加 ` --unsafe-perm` 这样来解决，如`sudo npm install --unsafe-perm --verbose -g sails`
 - - - - -
-2017-07-19 22:39:23
-77. 如果你经常要使用云主机而云主机的名称又太长，那应用 `hostname` 来修改吧，如果你想了解更多关于 `hostname` 命令的内容，你可以[点击这里](http://www.cnblogs.com/kerrycode/p/3595724.html)也许有不正确的地方，所以实践出真知。
+2017-07-19 22:39:23      
+
+77. 云主机 `hostname` 修改名称    
+如果你经常要使用云主机而云主机的名称又太长，那应用 `hostname` 来修改吧，如果你想了解更多关于 `hostname` 命令的内容，你可以[点击这里](http://www.cnblogs.com/kerrycode/p/3595724.html)也许有不正确的地方，所以实践出真知。
+### Ubuntu 
+- 永久修改 `hostname` ：修改 `/etc/hostname` 文件，重启 用`uname -n` 来判断是否借点书和成功
+- 临时修改：`hostname new_your_hostname`
+=======
+65. shell 脚本解决问题
+- - - - -
+2017-07-13 09:47:04
+- `winston` 为 Node.js 的日志框架
+>>>>>>> Stashed changes
+
+- - - - -
+2017-07-20 10:27:42
+78. node.js 首先去目录下查找有没有 `index.js` 文件 ,如果没有,继续查找有没有 `default.js` 文件,接着查找有没有 `index.json`文件,最后查找有没有 `default.json` 文件.
+- - - - -
+2017-07-25 13:09:18
+79. shell 语法 
+判断文件夹是否存在 
+- `-d`: 文件夹
+```shell
+if [ ! -d "folder"]; then
+  # This is your code
+fi
+```
+
+- `-f`：文件
+```shell
+if [! -f "file"]; then
+  touch "$file"
+fi
+```
+
+- `-n`: 判断一个变量是否有值
+```shell
+if [! -n "$var"]; then
+  echo "$var is empty"
+  exit 0
+fi
+```
+
+- `-x`：参数判断 `$folder` 是否存在并且是否具有可执行权限
+```shell
+if [! -x "folder"]; then
+  mkdir "$folder"
+fi
+```
+- - - - -
+80. node 模块发布到 npm 社区
+在发布时版本号要符合要求：
+```
+版本格式：主版号.次版号.修订号，版号递增规则如下：
+
+主版号：当你做了不相容的 API 修改，
+次版号：当你做了向下相容的功能性新增，
+修订号：当你做了向下相容的问题修正。
+先行版号及版本编译资讯可以加到「主版号.次版号.修订号」的后面，作为延伸。
+```
+要修改 `package.json` 的版本号。把代码提交到 git 服务端（如果你用的是 Git的话）
+`npm publish --tag 0.1.0.1` 这样
+[来自这里的解释](https://github.com/npm/npm/issues/9266): make sure that you've changed the version of your application in the package.json file as well not only the version on git repo
+- - - - -
+81. Ubuntu 16.04 重启 mysql ：`systemctl restart mysql`
+- - - - -
+2017-07-29 16:24:12
+82. Shell 脚本语言
+BASH_SOURCE[0] 等于 BASH_SOURCE,  取得当执行的 shell 文件所在的路径及文件名。
+test.sh
+```
+#!/bin/sh
+set -e
+echo "${BASH_SOURCE[0]}"
+echo "${BASH_SOURCE}"
+echo "$(dirname "${BASH_SOURCE[0]}" )"
+DIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd )"
+echo $DIR
+```
+source ./test.sh 输出为
+```
+./test.sh
+./test.sh
+.
+/root/github/banquanjia
+```
+- - - - -
+2017-08-14 14:43:04
+83. IDEA 修改类名 shift+f6 或者 鼠标右键 refactor->rename
+84. idea 自定义代码模板 ：`Editor -> Live Templates -> output`, 参考 原模板
+
+- - - - -
+2017-08-15 20:00:55
+85. java + maven + mongodb
+[mongodb 官方文档](http://mongodb.github.io/mongo-java-driver/2.13/getting-started/installation-guide/)
+```
+<dependencies>
+    <dependency>
+        <groupId>org.mongodb</groupId>
+        <artifactId>mongo-java-driver</artifactId>
+        <version>2.13.2</version>
+    </dependency>
+</dependencies>
+```
+86. 国内 mongodb-driver jar 下载地址
+ [国内 mongodb-driver jar 下载地址](http://central.maven.org/maven2/org/mongodb/mongo-java-driver/)
+
+- - - - -
+2017-08-16 06:12:23
+87. OSS
+阿里云对象存储服务（Object Storage Service，简称OSS）为您提供基于网络的数据存取服务。使用OSS，您可以通过网络随时存储和调用包括文本、图片、音频和视频等在内的各种非结构化数据文件。
