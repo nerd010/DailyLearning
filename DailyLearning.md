@@ -599,3 +599,26 @@ brew install vim –with-lua –with-override-system-vi
 升级GUI版本的vim
 brew install macvim –with-lua –with-override-system-vim
 ```
+- - - - -
+2017-09-06 23:40:16
+
+89. CentOS 7最小化安装后找不到‘ifconfig’命令——修复小提示
+可以使用下面的命令方式进行查询
+```
+$ ip addr 
+或
+$ ip link
+或
+ip -s link
+```
+下面的命令让我们找出哪个包提供了 ifconfig 命令
+```
+$ yum provides ifconfig
+或
+$ yum whatprovides ifconfig
+```
+“provides”或者“whatprovides”开关用于找出某个包提供了某些功能或文件。net-tools包提供了ifconfig命令，安装 net-tools 
+```
+$ yum install net-tools
+```
+现在就可以使用 `ifconfig -a`
