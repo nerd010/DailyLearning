@@ -622,3 +622,8 @@ $ yum whatprovides ifconfig
 $ yum install net-tools
 ```
 现在就可以使用 `ifconfig -a`
+- - - - -
+2017-09-08 15:14:07
+
+90. git + refusing to merge unrelated histories
+A: `git pull origin master --allow-unrelated-histories`
