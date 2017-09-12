@@ -627,3 +627,34 @@ $ yum install net-tools
 
 90. git + refusing to merge unrelated histories
 A: `git pull origin master --allow-unrelated-histories`
+- - - - -
+2017-09-12 13:20:52
+91. Ubuntu install Node.js
+#### 源码安装
+```
+$ sudo git clone https://github.com/nodejs/node.git
+Cloning into 'node'...
+```
+- 修改目录权限
+```
+$ sudo chmod -R 755 node
+```
+- 使用 ./configure 创建编译文件，并按照：
+```
+$ cd node
+$ sudo ./configure
+$ sudo make
+$ sudo make install
+```
+- 查看 node 版本：
+ ```
+$ node --version
+v0.10.25
+ ````
+
+- `apt-get` 命令安装
+```
+sudo apt-get install nodejs
+sudo apt-get install npm
+```
+- - - - -
