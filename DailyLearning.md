@@ -657,4 +657,10 @@ v0.10.25
 sudo apt-get install nodejs
 sudo apt-get install npm
 ```
-- - - - -
+- 简单快捷的方式
+```
+curl -sL https://deb.nodesource.com/setup_6.x |  bash -
+apt-get install -y nodejs
+npm install --global grpc
+apt install -y npm
+```
