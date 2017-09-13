@@ -664,3 +664,7 @@ apt-get install -y nodejs
 npm install --global grpc
 apt install -y npm
 ```
+
+- - - - -
+2017-09-13 16:40:11
+92. mysql-workbench
