@@ -668,3 +668,13 @@ apt install -y npm
 - - - - -
 2017-09-13 16:40:11
 92. mysql-workbench
+
+- - - - -
+2017-11-15 23:24:11
+93. 关于 hyperledger fabric 的问题
+Q：cryptogen tool not found. exiting错误解决办法
+A：解决方案是：`You are missing: "Platform specific binaries", see here how to get them.`
+   你需要在fabric-samples目录下面执行如下命令，将所需要的二进制文件下载下来：
+  `curl -sSL https://goo.gl/eYdRbX | bash`
+    执行完以后会在fabric-samples目录下面创建一个bin目录，下面放着所需要的所有的二进制工具。
+   这时候你在first-network下执行 `./byfn.sh -m generate`
