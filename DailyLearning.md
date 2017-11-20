@@ -678,3 +678,12 @@ A：解决方案是：`You are missing: "Platform specific binaries", see here h
   `curl -sSL https://goo.gl/eYdRbX | bash`
     执行完以后会在fabric-samples目录下面创建一个bin目录，下面放着所需要的所有的二进制工具。
    这时候你在first-network下执行 `./byfn.sh -m generate`
+- - - - -
+2017-11-20 10:13:03
+94. vim中如何将一个文件的内容拷贝到另一个文件中
+```
+如要将a.txt的内容拷贝到b.txt中，可以执行如下步骤：
+用vim打开b.txt。将光标定位到要复制插入的位置，然后进入命令模式中输入
+:r!cat a.txt
+保存退出：wq！搞定～～
+```
