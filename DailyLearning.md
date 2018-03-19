@@ -687,3 +687,110 @@ A：解决方案是：`You are missing: "Platform specific binaries", see here h
 :r!cat a.txt
 保存退出：wq！搞定～～
 ```
+
+95. ubuntu 16.04  perl: warning: Setting locale failed.
+
+All other threads were closed already, so i started a new one. It may spare some time for you.
+
+I have a virtual private server running Ubuntu 9.10 and got messages like this:
+Code:
+```
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+    LANGUAGE = (unset),
+    LC_ALL = (unset),
+    LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory
+locale: Cannot set LC_ALL to default locale: No such file or directory
+```
+
+To get rid of the messages I had to run this command:
+Code:
+```
+# locale-gen en_US en_US.UTF-8 hu_HU hu_HU.UTF-8
+```
+then
+Code:
+```
+# dpkg-reconfigure locales
+```
+
+The problem was solved. I didn't had to edit any files like /etc/environment
+Hope it helps for you!
+
+I found the solution here:
+[http://www.linuxquestions.org/questi...41#post3540541](http://www.linuxquestions.org/questi...41#post3540541)
+
+96. 修复ubuntu中文输入的问题
+
+首先,我们使用xshell连接登录服务器,然后在终端中输入 `locale` 命令,得到结果如下:
+
+```
+LANG=zh_CN.UTF-8
+LANGUAGE=zh_CN.UTF-8
+LC_CTYPE=zh_CN.UTF-8
+LC_NUMERIC="zh_CN.UTF-8"
+LC_TIME="zh_CN.UTF-8"
+LC_COLLATE="zh_CN.UTF-8"
+LC_MONETARY="zh_CN.UTF-8"
+LC_MESSAGES="zh_CN.UTF-8"
+LC_PAPER="zh_CN.UTF-8"
+LC_NAME="zh_CN.UTF-8"
+LC_ADDRESS="zh_CN.UTF-8"
+LC_TELEPHONE="zh_CN.UTF-8"
+LC_MEASUREMENT="zh_CN.UTF-8"
+LC_IDENTIFICATION="zh_CN.UTF-8"
+LC_ALL=
+```
+
+各个选项的含义如下:
+
+- 语言符号及其分类(LC_CTYPE)
+- 数字(LC_NUMERIC)
+- 比较和排序习惯(LC_COLLATE)
+- 时间显示格式(LC_TIME)
+- 货币单位(LC_MONETARY)
+- 信息主要是提示信息,错误信息, 状态信息, 标题, 标签, 按钮和菜单等(LC_MESSAGES)
+- 姓名书写方式(LC_NAME)
+- 地址书写方式(LC_ADDRESS)
+- 电话号码书写方式(LC_TELEPHONE)
+- 度量衡表达方式(LC_MEASUREMENT)
+- 默认纸张尺寸大小(LC_PAPER)
+- 对locale自身包含信息的概述(LC_IDENTIFICATION)。
+
+关于 `locale` 更多的信息,请查看 [Locale-wiki](https://wiki.ubuntu.com.cn/Locale)
+
+我们要修复的是中文文件名的显示和中文输入的问题,所以我们接下来只需要设置 `LC_CTYPE` 即可.
+
+查看系统支持的编码方式:
+```
+$ locale -a
+```
+
+看看输出内容中是否包含 zh_CN.utf-8 ,如果不包含的话,我们需要添加这个配置项
+
+```
+$ sudo locale-gen zh_CN.utf-8
+```
+修改后,我的输出内容如下,已经包含 `zh_CN.utf-8`
+
+接下来,修改 `LC_CTYPE` 的值,使用 `export LC_CTYPE='zh_CN.UTF-8'` ,命令来修改.
+
+直接执行 `export LC_CTYPE='zh_CN.UTF-8'` 那么只对当前会话有效,
+
+所有用户(永久):修改 `/etc/profile`
+
+当前用户(永久):修改 `~/.bashrc`
+
+建议直接修改 `/etc/profile` 文件,这样所有用户都可以使用.
+
+修改完成后,退出登录,重新登录一次,再输入`locale`  命令,可以得到如下输出:
+
+
+- - - - -
+2018-03-19 10:24:49
+Q: error: RPC failed; curl transfer closed with outstanding read data remaining
+A: [stackoverflow-A](https://stackoverflow.com/questions/38618885/error-rpc-failed-curl-transfer-closed-with-outstanding-read-data-remaining)
