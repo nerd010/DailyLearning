@@ -2,7 +2,7 @@
 ## 目录
 
 1. [配置环境](#配置环境)
-2. [下载 fabric, fabric-samples 到 `GOPATH` 目录下](#下载fabric-fabric-samples)
+2. [下载 fabric](#下载-fabric)
 3. [下载 docker images](#下载docker-images-fabric1-1)
 4. [安装 docker swarm, 初始化 manager 节点，joined worker 节点](#安装-docker-swarm)
 5. [安装 portainer （可选）](#安装-portainer-可选)
