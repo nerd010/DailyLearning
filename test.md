@@ -76,7 +76,7 @@ optional, where <integer> specifies channel creation timeout in seconds. If not 
 
 
 
-### 下载 fabric, fabric-samples 到 `GOPATH` 目录下
+### 下载 fabric
 
 
 For brevity, we often refer to a command (peer), a subcommand (channel), or subcommand option (fetch) simply as a command.
