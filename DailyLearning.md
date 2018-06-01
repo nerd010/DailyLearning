@@ -473,33 +473,44 @@ process.cwd(): 总是返回运行 node 命令时所在的文件夹的绝对路�
 - `-P`：提供（旧）密语； 
 - `-q`：静默模式； 
 - `-t`：指定要创建的密钥类型
+```
 
 76. Linux Ubuntu 
 `sudo npm install xxx` 出现 这样的错误信息`gyp WARN EACCES ......`
 需要添加 ` --unsafe-perm` 这样来解决，如`sudo npm install --unsafe-perm --verbose -g sails`
+
 - - - - -
 2017-07-19 22:39:23      
 
 77. 云主机 `hostname` 修改名称    
 如果你经常要使用云主机而云主机的名称又太长，那应用 `hostname` 来修改吧，如果你想了解更多关于 `hostname` 命令的内容，你可以[点击这里](http://www.cnblogs.com/kerrycode/p/3595724.html)也许有不正确的地方，所以实践出真知。
+
 ### Ubuntu 
+
 - 永久修改 `hostname` ：修改 `/etc/hostname` 文件，重启 用`uname -n` 来判断是否借点书和成功
 - 临时修改：`hostname new_your_hostname`
 =======
 65. shell 脚本解决问题
+
 - - - - -
 2017-07-13 09:47:04
+
 - `winston` 为 Node.js 的日志框架
 >>>>>>> Stashed changes
 
 - - - - -
 2017-07-20 10:27:42
+
 78. node.js 首先去目录下查找有没有 `index.js` 文件 ,如果没有,继续查找有没有 `default.js` 文件,接着查找有没有 `index.json`文件,最后查找有没有 `default.json` 文件.
+
 - - - - -
 2017-07-25 13:09:18
+
 79. shell 语法 
 判断文件夹是否存在 
+
 - `-d`: 文件夹
+
 ```shell
 if [ ! -d "folder"]; then
   # This is your code
@@ -507,6 +518,7 @@ fi
 ```
 
 - `-f`：文件
+
 ```shell
 if [! -f "file"]; then
   touch "$file"
@@ -514,6 +526,7 @@ fi
 ```
 
 - `-n`: 判断一个变量是否有值
+
 ```shell
 if [! -n "$var"]; then
   echo "$var is empty"
@@ -522,14 +535,18 @@ fi
 ```
 
 - `-x`：参数判断 `$folder` 是否存在并且是否具有可执行权限
+
 ```shell
 if [! -x "folder"]; then
   mkdir "$folder"
 fi
 ```
+
 - - - - -
+
 80. node 模块发布到 npm 社区
 在发布时版本号要符合要求：
+
 ```
 版本格式：主版号.次版号.修订号，版号递增规则如下：
 
@@ -538,16 +555,22 @@ fi
 修订号：当你做了向下相容的问题修正。
 先行版号及版本编译资讯可以加到「主版号.次版号.修订号」的后面，作为延伸。
 ```
+
 要修改 `package.json` 的版本号。把代码提交到 git 服务端（如果你用的是 Git的话）
 `npm publish --tag 0.1.0.1` 这样
 [来自这里的解释](https://github.com/npm/npm/issues/9266): make sure that you've changed the version of your application in the package.json file as well not only the version on git repo
+
 - - - - -
+
 81. Ubuntu 16.04 重启 mysql ：`systemctl restart mysql`
+
 - - - - -
 2017-07-29 16:24:12
+
 82. Shell 脚本语言
 BASH_SOURCE[0] 等于 BASH_SOURCE,  取得当执行的 shell 文件所在的路径及文件名。
 test.sh
+
 ```
 #!/bin/sh
 set -e
@@ -557,22 +580,29 @@ echo "$(dirname "${BASH_SOURCE[0]}" )"
 DIR="$( cd "$(dirname "${BASH_SOURCE[0]}")" && pwd )"
 echo $DIR
 ```
+
 source ./test.sh 输出为
+
 ```
 ./test.sh
 ./test.sh
 .
 /root/github/banquanjia
 ```
+
 - - - - -
 2017-08-14 14:43:04
+
 83. IDEA 修改类名 shift+f6 或者 鼠标右键 refactor->rename
+
 84. idea 自定义代码模板 ：`Editor -> Live Templates -> output`, 参考 原模板
 
 - - - - -
 2017-08-15 20:00:55
+
 85. java + maven + mongodb
 [mongodb 官方文档](http://mongodb.github.io/mongo-java-driver/2.13/getting-started/installation-guide/)
+
 ```
 <dependencies>
     <dependency>
@@ -582,28 +612,35 @@ source ./test.sh 输出为
     </dependency>
 </dependencies>
 ```
+
 86. 国内 mongodb-driver jar 下载地址
  [国内 mongodb-driver jar 下载地址](http://central.maven.org/maven2/org/mongodb/mongo-java-driver/)
 
 - - - - -
 2017-08-16 06:12:23
+
 87. OSS
 阿里云对象存储服务（Object Storage Service，简称OSS）为您提供基于网络的数据存取服务。使用OSS，您可以通过网络随时存储和调用包括文本、图片、音频和视频等在内的各种非结构化数据文件。
 
+
 - - - - -
 2017-09-02 14:29:12
+
 88. MacOS 升级 Vim
+
 ```
 升级终端用得vim
 brew install vim –with-lua –with-override-system-vi
 升级GUI版本的vim
 brew install macvim –with-lua –with-override-system-vim
 ```
+
 - - - - -
 2017-09-06 23:40:16
 
 89. CentOS 7最小化安装后找不到‘ifconfig’命令——修复小提示
 可以使用下面的命令方式进行查询
+
 ```
 $ ip addr 
 或
@@ -611,53 +648,72 @@ $ ip link
 或
 ip -s link
 ```
+
 下面的命令让我们找出哪个包提供了 ifconfig 命令
+
 ```
 $ yum provides ifconfig
 或
 $ yum whatprovides ifconfig
 ```
+
 “provides”或者“whatprovides”开关用于找出某个包提供了某些功能或文件。net-tools包提供了ifconfig命令，安装 net-tools 
+
 ```
 $ yum install net-tools
 ```
+
 现在就可以使用 `ifconfig -a`
+
 - - - - -
 2017-09-08 15:14:07
 
 90. git + refusing to merge unrelated histories
 A: `git pull origin master --allow-unrelated-histories`
+
 - - - - -
 2017-09-12 13:20:52
+
 91. Ubuntu install Node.js
+
 #### 源码安装
+
 ```
 $ sudo git clone https://github.com/nodejs/node.git
 Cloning into 'node'...
 ```
+
 - 修改目录权限
+
 ```
 $ sudo chmod -R 755 node
 ```
+
 - 使用 ./configure 创建编译文件，并按照：
+
 ```
 $ cd node
 $ sudo ./configure
 $ sudo make
 $ sudo make install
 ```
+
 - 查看 node 版本：
+
  ```
 $ node --version
 v0.10.25
- ````
+ ```
 
 - `apt-get` 命令安装
+
 ```
 sudo apt-get install nodejs
 sudo apt-get install npm
 ```
+
 - 简单快捷的方式
+
 ```
 curl -sL https://deb.nodesource.com/setup_6.x |  bash -
 apt-get install -y nodejs
@@ -671,8 +727,10 @@ apt install -y npm
 
 - - - - -
 2017-11-15 23:24:11
+
 93. 关于 hyperledger fabric 的问题
 Q：cryptogen tool not found. exiting错误解决办法
+
 A：解决方案是：`You are missing: "Platform specific binaries", see here how to get them.`
    你需要在fabric-samples目录下面执行如下命令，将所需要的二进制文件下载下来：
   `curl -sSL https://goo.gl/eYdRbX | bash`
@@ -680,7 +738,9 @@ A：解决方案是：`You are missing: "Platform specific binaries", see here h
    这时候你在first-network下执行 `./byfn.sh -m generate`
 - - - - -
 2017-11-20 10:13:03
+
 94. vim中如何将一个文件的内容拷贝到另一个文件中
+
 ```
 如要将a.txt的内容拷贝到b.txt中，可以执行如下步骤：
 用vim打开b.txt。将光标定位到要复制插入的位置，然后进入命令模式中输入
@@ -694,6 +754,7 @@ All other threads were closed already, so i started a new one. It may spare some
 
 I have a virtual private server running Ubuntu 9.10 and got messages like this:
 Code:
+
 ```
 perl: warning: Setting locale failed.
 perl: warning: Please check that your locale settings:
@@ -709,11 +770,14 @@ locale: Cannot set LC_ALL to default locale: No such file or directory
 
 To get rid of the messages I had to run this command:
 Code:
+
 ```
 # locale-gen en_US en_US.UTF-8 hu_HU hu_HU.UTF-8
 ```
 then
+
 Code:
+
 ```
 # dpkg-reconfigure locales
 ```
@@ -766,6 +830,7 @@ LC_ALL=
 我们要修复的是中文文件名的显示和中文输入的问题,所以我们接下来只需要设置 `LC_CTYPE` 即可.
 
 查看系统支持的编码方式:
+
 ```
 $ locale -a
 ```
@@ -775,6 +840,7 @@ $ locale -a
 ```
 $ sudo locale-gen zh_CN.utf-8
 ```
+
 修改后,我的输出内容如下,已经包含 `zh_CN.utf-8`
 
 接下来,修改 `LC_CTYPE` 的值,使用 `export LC_CTYPE='zh_CN.UTF-8'` ,命令来修改.
@@ -794,3 +860,15 @@ $ sudo locale-gen zh_CN.utf-8
 2018-03-19 10:24:49
 Q: error: RPC failed; curl transfer closed with outstanding read data remaining
 A: [stackoverflow-A](https://stackoverflow.com/questions/38618885/error-rpc-failed-curl-transfer-closed-with-outstanding-read-data-remaining)
+
+- - - - -
+
+Q: ubuntu docker-machine: command not found
+
+A: You need to install Docker Machine first on your local machine. If you use Ubuntu, just use this snippet:
+
+```
+$ curl -L https://github.com/docker/machine/releases/download/v0.13.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine &&
+chmod +x /tmp/docker-machine &&
+sudo cp /tmp/docker-machine /usr/local/bin/docker-machine
+```
