@@ -1170,5 +1170,21 @@ umount -f /mnt/14
 #umount -l /mnt/14
 ```
 
+---
+
+# 2018-06-12 14:27:37
+
+When I press tab for autocompletion I get this error:
+
+```
+-bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8)
+```
+
+fixed: adding these lines to ~/.bash_profile on my local machine (OSX).
+
+```
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+```
 
 
