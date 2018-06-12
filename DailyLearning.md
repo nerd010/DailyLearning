@@ -1132,4 +1132,43 @@ $ curl -L https://github.com/docker/machine/releases/download/v0.14.0/docker-mac
 https://github.com/docker/machine/releases
 ```
 
+- - - - -
+
+# 2018-06-07 11:15:38
+
+在使用 k8s 部署好基本的环境后，发现 ROLES 是 <none>，查了一下解决方法，但是目前并没有试用 [链接在此](https://github.com/kubernetes/kubernetes/issues/55232)
+
 ---
+
+# 2018-06-11 17:32
+
+Linux 在 shell 中 df 半天没反应
+
+解决方法：多是 mount 挂载远程服务，而远程服务已关闭，出于一直 mount 状态,df  -hT 是查看本地挂载和远程挂载！
+
+```
+$ df   -l                                ###只查看本地挂载的磁盘文件
+
+$ df   -hT                             ###查看本地及远程挂载的磁盘文件
+
+$ mount  |  column -t          ###查看mount挂载文件详情
+```
+
+- 查看nfs挂载点
+
+```
+$ nfsstat -m
+```
+
+- 强制卸载挂载点
+
+```
+#可能需要先执行命令杀掉访问挂载点的进程
+#fuser -km /mnt/14
+umount -f /mnt/14
+#如果上面的命令无法卸载执行下面命令
+#umount -l /mnt/14
+```
+
+
+
