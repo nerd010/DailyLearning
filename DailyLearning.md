@@ -1187,4 +1187,16 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 ```
 
+---
+
+# 2018-06-13 22:16:34
+
+Q: `Container runtime network not ready: NetworkReady=false reason:NetworkPluginNotReady message:docker: network plugin is not ready: cni config uninitialized`
+
+A: For information, I had this issue: Kubernetes introduces RBAC since v1.6, we need to create correspond Service Account, RBAC rules and flannel daemonset so that kubelet can communicate with api server correctly.
+
+```
+$ kubectl create -f https://raw.githubusercontent.com/coreos/flannel/v0.9.0/Documentation/kube-flannel.yml
+```
+
 
