@@ -1200,3 +1200,8 @@ $ kubectl create -f https://raw.githubusercontent.com/coreos/flannel/v0.9.0/Docu
 ```
 
 
+---
+
+# 2018-06-30 16:17:40
+
+[python 中 if __name__ == "__main__"](http://blog.konghy.cn/2017/04/24/python-entry-program/)
