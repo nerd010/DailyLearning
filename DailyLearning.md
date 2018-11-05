@@ -487,16 +487,23 @@ process.cwd(): 总是返回运行 node 命令时所在的文件夹的绝对路�
 - 临时修改：`hostname new_your_hostname`
 =======
 65. shell 脚本解决问题
+
 - - - - -
-2017-07-13 09:47:04
+
+# 2017-07-13 09:47:04
 - `winston` 为 Node.js 的日志框架
 >>>>>>> Stashed changes
 
 - - - - -
-2017-07-20 10:27:42
+
+# 2017-07-20 10:27:42
+
 78. node.js 首先去目录下查找有没有 `index.js` 文件 ,如果没有,继续查找有没有 `default.js` 文件,接着查找有没有 `index.json`文件,最后查找有没有 `default.json` 文件.
+
 - - - - -
-2017-07-25 13:09:18
+
+# 2017-07-25 13:09:18
+
 79. shell 语法 
 判断文件夹是否存在 
 - `-d`: 文件夹
@@ -528,7 +535,9 @@ if [! -x "folder"]; then
 fi
 ```
 - - - - -
+
 80. node 模块发布到 npm 社区
+
 在发布时版本号要符合要求：
 ```
 版本格式：主版号.次版号.修订号，版号递增规则如下：
@@ -544,7 +553,9 @@ fi
 - - - - -
 81. Ubuntu 16.04 重启 mysql ：`systemctl restart mysql`
 - - - - -
+
 2017-07-29 16:24:12
+
 82. Shell 脚本语言
 BASH_SOURCE[0] 等于 BASH_SOURCE,  取得当执行的 shell 文件所在的路径及文件名。
 test.sh
@@ -565,14 +576,19 @@ source ./test.sh 输出为
 /root/github/banquanjia
 ```
 - - - - -
+
 2017-08-14 14:43:04
+
 83. IDEA 修改类名 shift+f6 或者 鼠标右键 refactor->rename
 84. idea 自定义代码模板 ：`Editor -> Live Templates -> output`, 参考 原模板
 
 - - - - -
+
 2017-08-15 20:00:55
+
 85. java + maven + mongodb
 [mongodb 官方文档](http://mongodb.github.io/mongo-java-driver/2.13/getting-started/installation-guide/)
+
 ```
 <dependencies>
     <dependency>
@@ -586,12 +602,16 @@ source ./test.sh 输出为
  [国内 mongodb-driver jar 下载地址](http://central.maven.org/maven2/org/mongodb/mongo-java-driver/)
 
 - - - - -
+
 2017-08-16 06:12:23
+
 87. OSS
 阿里云对象存储服务（Object Storage Service，简称OSS）为您提供基于网络的数据存取服务。使用OSS，您可以通过网络随时存储和调用包括文本、图片、音频和视频等在内的各种非结构化数据文件。
 
 - - - - -
+
 2017-09-02 14:29:12
+
 88. MacOS 升级 Vim
 ```
 升级终端用得vim
@@ -600,6 +620,7 @@ brew install vim –with-lua –with-override-system-vi
 brew install macvim –with-lua –with-override-system-vim
 ```
 - - - - -
+
 2017-09-06 23:40:16
 
 89. CentOS 7最小化安装后找不到‘ifconfig’命令——修复小提示
@@ -622,13 +643,17 @@ $ yum whatprovides ifconfig
 $ yum install net-tools
 ```
 现在就可以使用 `ifconfig -a`
+
 - - - - -
+
 2017-09-08 15:14:07
 
 90. git + refusing to merge unrelated histories
 A: `git pull origin master --allow-unrelated-histories`
 - - - - -
+
 2017-09-12 13:20:52
+
 91. Ubuntu install Node.js
 #### 源码安装
 ```
@@ -666,11 +691,14 @@ apt install -y npm
 ```
 
 - - - - -
+
 2017-09-13 16:40:11
+
 92. mysql-workbench
 
 - - - - -
-2017-11-15 23:24:11
+
+# 2017-11-15 23:24:11
 93. 关于 hyperledger fabric 的问题
 Q：cryptogen tool not found. exiting错误解决办法
 A：解决方案是：`You are missing: "Platform specific binaries", see here how to get them.`
@@ -679,7 +707,9 @@ A：解决方案是：`You are missing: "Platform specific binaries", see here h
     执行完以后会在fabric-samples目录下面创建一个bin目录，下面放着所需要的所有的二进制工具。
    这时候你在first-network下执行 `./byfn.sh -m generate`
 - - - - -
-2017-11-20 10:13:03
+
+# 2017-11-20 10:13:03
+
 94. vim中如何将一个文件的内容拷贝到另一个文件中
 ```
 如要将a.txt的内容拷贝到b.txt中，可以执行如下步骤：
@@ -791,6 +821,17 @@ $ sudo locale-gen zh_CN.utf-8
 
 
 - - - - -
-2018-03-19 10:24:49
+
+# 2018-03-19 10:24:49
+
 Q: error: RPC failed; curl transfer closed with outstanding read data remaining
 A: [stackoverflow-A](https://stackoverflow.com/questions/38618885/error-rpc-failed-curl-transfer-closed-with-outstanding-read-data-remaining)
+
+- - - - - 
+
+# 2018-11-05
+
+Q: *爬虫问题* error :如下，我直接用http.Get(url)进行获取信息，用浏览器可以对该URL进行访问，可是爬取时则返回403，禁止访问 
+A: [模拟浏览器访问，修改 请求头 User-Agent](https://blog.csdn.net/qq_36183935/article/details/80499183)
+
+查看 chrome 的 User-Agent: 在地址栏中输入：about:version 查询到更详细的UserAgent信息
