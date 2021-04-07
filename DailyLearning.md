@@ -1263,3 +1263,6 @@ $ kubectl create -f https://raw.githubusercontent.com/coreos/flannel/v0.9.0/Docu
 
 [python 中 if __name__ == "__main__"](http://blog.konghy.cn/2017/04/24/python-entry-program/)
 >>>>>>> de8e637a3391ac8e8cd1472d6ed8ee88741d5266
+
+# 2021-04-07 11:40:19
+- [关于 Redis 的面试题](https://juejin.cn/post/6844903982066827277)
