@@ -1283,3 +1283,22 @@ $ kubectl create -f https://raw.githubusercontent.com/coreos/flannel/v0.9.0/Docu
 - 广度优先搜索算法
     - 是否有从 A 到 B 的路径
     - 如果有找出最短路径
+- - - - -
+# 2021-04-12 09:05:44
+## Redis
+**brew install on mac**
+```
+brew install redis
+```
+**upgrade**
+```
+brew upgrade redis
+```
+**start redis**
+```
+brew services start redis
+```
+**to stop is, run**
+```
+brew services stop redis
+```
